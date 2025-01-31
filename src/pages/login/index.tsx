@@ -8,7 +8,7 @@ import { Button } from "../../components/Button";
 import { Input } from "../../components/input";
 import { useForm } from "react-hook-form";
 import { api } from "../../services/api";
-import { Container, Title, TitleLogin, SubtitleLogin, EsqueciText, CriarText, Wrapper, Column, Row } from './styles';
+import { Container, Title, TitleLogin, SubtitleLogin, EsqueciText, CriarText, Wrapper, Column, Row, Iconmail, Iconlock } from './styles';
 import { useNavigate } from "react-router-dom";
 import { IFormData } from './types';
 import React from 'react';
@@ -51,16 +51,16 @@ const Login = () => {
             </Column>
             <Column>
                 <Wrapper>
-                    <TitleLogin>Faça seu cadastro</TitleLogin>
+                    <TitleLogin>Faça seu login</TitleLogin>
                     <SubtitleLogin>Faça seu login e make the change</SubtitleLogin>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <Input name="email" errorMessage={errors?.email?.message} control={control} placeholder="E-mail" leftIcon={<MdEmail />} defaultValue={undefined}/>
-                        <Input name="password" control={control} errorMessage={errors?.password?.message} placeholder="Senha" type="password" leftIcon={<MdLock />} defaultValue={undefined}/>
+                        <Input name="email" errorMessage={errors?.email?.message} control={control} placeholder="E-mail" leftIcon={<Iconmail />} defaultValue={undefined}/>
+                        <Input name="password" control={control} errorMessage={errors?.password?.message} placeholder="Senha" type="password" leftIcon={<Iconlock />} defaultValue={undefined}/>
                         <Button title="Entrar" $variant="primary" type="submit"/>
                     </form>
                     <Row>
                         <EsqueciText>Esqueci minha senha</EsqueciText>
-                        <CriarText>Criar Conta</CriarText>
+                        <CriarText onClick={() => navigate('/cadastro')}>Criar Conta</CriarText>
                     </Row>
 
                 </Wrapper>

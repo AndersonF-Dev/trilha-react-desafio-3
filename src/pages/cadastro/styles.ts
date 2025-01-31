@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaUser } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { MdLock } from 'react-icons/md';
 
@@ -21,50 +22,64 @@ export const Title = styled.h2`
     font-size: 32px;
     font-family: 'Open Sans';
     font-weight: 700;
-    width: 565px;
+    width: 388px;
     margin-bottom: 20px;
     line-height: 44px;
 
     color: #ffffff;
 `;
 
-export const TitleLogin = styled.p`
+export const TitleCadastro = styled.p`
     font-size: 32px;
     font-family: 'Open Sans';
     font-weight: 700;
-    width: 320px;
+    width: 368px;
     margin-bottom: 20px;
     line-height: 44px;
 `;
-export const SubtitleLogin = styled.p`
+export const SubtitleCadastro = styled.p`
     font-size: 18px;
     font-family: 'Open Sans';
     font-weight: 400;
-    width: 320px;
+    width: 296px;
     margin-bottom: 20px;
-    line-height: 44px;
+    /* line-height: 44px; */
 
     color: #ffffff;
 `;
-export const EsqueciText = styled.p`
+
+export const FazerLogin = styled.p`
+    display: flex;
     font-size: 14px;
     font-family: 'Open Sans';
     font-weight: 700;
-    width: 320px;
-    line-height: 19px;
-    
-    color: #E5E044;
+    width: 220px;
+
+    color:  #23DD7A;
+    cursor: pointer;
 `;
-export const CriarText = styled.p`
+
+export const ContaText = styled.p`
     font-size: 14px;
     font-family: 'Open Sans';
     font-weight: 700;
     width: 120px;
     line-height: 19px;
 
-    color:rgb(226, 3, 152);
-    cursor: pointer;
+    color:rgb(255, 255, 255);
+    ;
 `;
+
+export const CriarConta = styled.p`
+    font-size: 18px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    width: 372px;
+    margin-bottom: 20px;
+
+    color: #ffffff;
+`;
+
 export const Wrapper = styled.div`
     max-width: 300px;
     margin-left: 100px;
@@ -78,8 +93,14 @@ export const Column = styled.div`
 
 export const Row = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
     margin-top: 20px
+`;
+
+export const Icon = styled(FaUser)<{ color?: string, size?: string }>`
+color: #8647AD;  
+font-size: 18px;
 `;
 
 export const Iconmail = styled(MdEmail)<{ color?: string }>`
@@ -90,5 +111,4 @@ font-size: 18px;
 export const Iconlock = styled(MdLock)<{ color?: string }>`
 color: #8647AD;  
 font-size: 18px;
-  
 `;
